@@ -1,22 +1,27 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-    <title>zirec.lol</title>
+    <title>Playing GIF</title>
     <meta charset="UTF-8">
     <style>
         body {
-            background-color: black;
-            color: white;
-            font-family: Arial; /* Ensures text is in monospaced font */
+            margin: 0;
+            overflow: hidden; /* Prevent scrollbars */
+            height: 100vh;
+            width: 100vw;
+        }
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensure the GIF covers the entire viewport */
         }
     </style>
 </head>
 <body>
-    <pre>
---[[
-zirec.lol test website
-        mew streak 
-]]
-    </pre>
+    <img src="https://media.discordapp.net/attachments/725474200294260816/832706525851287592/5757be5517cc28071825b6574c2eb87068d8ef67.gif" alt="Animated GIF">
 </body>
 </html>
