@@ -1,25 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Playing GIF</title>
+    <title>zirec.lol</title>
     <meta charset="UTF-8">
     <style>
         body {
             background-color: black;
+            color: white;
+            font-family: Arial; /* Ensures text is in monospaced font */
+            margin: 0;
+            overflow: hidden; /* Prevents scrollbars from appearing */
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
+            justify-content: center;
             height: 100vh;
+            width: 100vw;
+            position: relative;
+        }
+
+        pre {
+            position: absolute;
+            top: 20px;
+            text-align: center;
+            z-index: 1; /* Ensures text is above the GIF */
             margin: 0;
         }
 
         img {
-            max-width: 100%;
-            height: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover; /* Ensures the GIF covers the entire viewport while maintaining its aspect ratio */
         }
     </style>
 </head>
 <body>
+    <pre>
+--[[
+zirec.lol test website
+        mew streak 
+]]
+    </pre>
     <img src="https://media.discordapp.net/attachments/725474200294260816/832706525851287592/5757be5517cc28071825b6574c2eb87068d8ef67.gif" alt="Animated GIF">
 </body>
 </html>
