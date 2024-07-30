@@ -1,23 +1,73 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>zirec.lol</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lua Script Loader</title>
     <style>
         body {
-            background-color: black;
-            color: white;
-            font-family: monospace; /* Ensures text is in monospaced font */
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            width: 80%;
+            max-width: 800px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding: 20px;
+        }
+        pre {
+            background-color: #000;
+            color: #0f0;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
-    <pre>
-    This is a simple plain text website.
-    
-    You can add any plain text content here.
-    
-    This text will be displayed as-is in a monospaced font.
-    </pre>
+    <div class="container">
+        <h1>Lua Script Loader</h1>
+        <pre id="script-content">
+-- Your Lua script will appear here
+local function helloWorld()
+    print("Hello, world!")
+end
+
+helloWorld()
+        </pre>
+        <button onclick="copyScript()">Copy Script</button>
+    </div>
+
+    <script>
+        function copyScript() {
+            var scriptContent = document.getElementById('script-content').innerText;
+            navigator.clipboard.writeText(scriptContent).then(function() {
+                alert('Script copied to clipboard!');
+            }, function(err) {
+                alert('Failed to copy script: ' + err);
+            });
+        }
+    </script>
 </body>
 </html>
